@@ -3,7 +3,6 @@
                             [utils :refer [render-content
                                            deflayout
                                            defpartial]])
-            [stefon.core :refer [link-to-asset]]
             [clojure.string :as s]
             [incise.config :as conf]
             (hiccup [core :refer :all]
@@ -13,18 +12,8 @@
                     [element :refer :all]))
   (:import [java.io FileNotFoundException]))
 
-(defn- attempt-link-to-asset
-  "Return nil if the asset is not found othewise return a url for the asset."
-  [asset-name]
-  (try
-    (link-to-asset asset-name)
-    (catch FileNotFoundException _ nil)))
-
-(defn stylesheets []
-  [(attempt-link-to-asset "stylesheets/app.css.stefon")])
-
-(defn javascripts []
-  [(attempt-link-to-asset "javascripts/app.js.stefon")])
+(defn stylesheets [] [])
+(defn javascripts [] [])
 
 (defpartial head
   "The default head."
