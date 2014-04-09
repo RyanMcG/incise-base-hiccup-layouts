@@ -47,10 +47,9 @@
     (html5
       (head)
       [:body#page
-       [:div.container
-        (header)
-        [:div#content (content)]
-        (footer)]
+       (header)
+       [:div#content [:article (content)]]
+       (footer)
        (apply include-js (remove nil? (javascripts)))])))
 
 (register [:base] base)
