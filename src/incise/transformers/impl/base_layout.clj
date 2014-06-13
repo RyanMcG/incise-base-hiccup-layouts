@@ -1,8 +1,8 @@
-(ns incise.layouts.impl.base
-  (:require (incise.layouts [core :refer [register]]
-                            [utils :refer [render-content
-                                           deflayout
-                                           defpartial]])
+(ns incise.transformers.impl.base-layout
+  (:require (incise.transformers [core :refer [register]]
+                                 [layout :refer [render-content
+                                                 deflayout
+                                                 defpartial]])
             [clojure.string :as s]
             [incise.config :as conf]
             (hiccup [core :refer :all]
@@ -52,4 +52,4 @@
        (footer)
        (apply include-js (remove nil? (javascripts)))])))
 
-(register [:base] base)
+(register :base-layout base)
