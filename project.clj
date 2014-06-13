@@ -1,4 +1,4 @@
-(defproject incise-base-hiccup-layouts "0.2.0"
+(defproject incise-base-hiccup-layouts "0.3.0"
   :description "Some very basic, hiccup layouts for incise."
   :url "https://github.com/RyanMcG/incise-base-hiccup-layouts"
   :license {:name "Eclipse Public License"
